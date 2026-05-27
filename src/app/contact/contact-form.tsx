@@ -104,12 +104,22 @@ export default function ContactFormClient() {
 
     setIsLoading(true);
     try {
+      // Only include phone if it has a value
+      const submitData = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        industry: formData.industry,
+        message: formData.message,
+        ...(formData.phone && { phone: formData.phone }),
+      };
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submitData),
       });
 
       if (!response.ok) {
