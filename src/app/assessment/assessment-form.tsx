@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { Select } from "@/components/ui/Select";
-import { Checkbox } from "@/components/ui/Checkbox";
 
 interface FormData {
   name: string;
@@ -308,7 +307,6 @@ export default function AssessmentFormClient() {
                       <Select
                         label="Company Size"
                         options={[
-                          { value: "", label: "Select company size..." },
                           { value: "1-100", label: "1-100 employees" },
                           { value: "101-500", label: "101-500 employees" },
                           { value: "501-2000", label: "501-2,000 employees" },
@@ -327,7 +325,6 @@ export default function AssessmentFormClient() {
                       <Select
                         label="Industry"
                         options={[
-                          { value: "", label: "Select your industry..." },
                           { value: "healthcare", label: "Healthcare" },
                           { value: "airlines", label: "Airlines & Travel" },
                           { value: "banking", label: "Banking & Financial Services" },
@@ -367,19 +364,22 @@ export default function AssessmentFormClient() {
                       )}
                       <div className="space-y-3 bg-neutral-50 p-4 rounded-lg">
                         {systemOptions.map((option) => (
-                          <label key={option.id} className="flex items-center gap-3">
-                            <Checkbox
+                          <div key={option.id} className="flex items-center gap-3">
+                            <input
+                              type="checkbox"
+                              id={`system-${option.id}`}
                               checked={formData.currentSystems.includes(
                                 option.id
                               )}
-                              onCheckedChange={() =>
+                              onChange={() =>
                                 handleCheckboxChange(option.id, "currentSystems")
                               }
+                              className="w-5 h-5 rounded border-neutral-300"
                             />
-                            <span className="text-sm text-neutral-700">
+                            <label htmlFor={`system-${option.id}`} className="text-sm text-neutral-700 cursor-pointer">
                               {option.label}
-                            </span>
-                          </label>
+                            </label>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -395,22 +395,25 @@ export default function AssessmentFormClient() {
                       )}
                       <div className="space-y-3 bg-neutral-50 p-4 rounded-lg">
                         {painPointOptions.map((option) => (
-                          <label key={option.id} className="flex items-center gap-3">
-                            <Checkbox
+                          <div key={option.id} className="flex items-center gap-3">
+                            <input
+                              type="checkbox"
+                              id={`pain-${option.id}`}
                               checked={formData.primaryPainPoints.includes(
                                 option.id
                               )}
-                              onCheckedChange={() =>
+                              onChange={() =>
                                 handleCheckboxChange(
                                   option.id,
                                   "primaryPainPoints"
                                 )
                               }
+                              className="w-5 h-5 rounded border-neutral-300"
                             />
-                            <span className="text-sm text-neutral-700">
+                            <label htmlFor={`pain-${option.id}`} className="text-sm text-neutral-700 cursor-pointer">
                               {option.label}
-                            </span>
-                          </label>
+                            </label>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -429,7 +432,6 @@ export default function AssessmentFormClient() {
                       <Select
                         label="Modernization Timeline"
                         options={[
-                          { value: "", label: "Select timeline..." },
                           { value: "immediate", label: "Immediate (0-3 months)" },
                           { value: "3-6-months", label: "3-6 months" },
                           { value: "6-12-months", label: "6-12 months" },
@@ -448,7 +450,6 @@ export default function AssessmentFormClient() {
                       <Select
                         label="Annual IT Modernization Budget"
                         options={[
-                          { value: "", label: "Select budget range..." },
                           { value: "under-500k", label: "Under $500K" },
                           { value: "500k-2m", label: "$500K - $2M" },
                           { value: "2m-10m", label: "$2M - $10M" },
