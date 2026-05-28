@@ -137,7 +137,19 @@ export default function DemoFormClient() {
       const datetime = new Date(formData.preferredDate);
       datetime.setHours(hour, minute, 0, 0);
 
-      const submitData: Record<string, any> = {
+      interface DemoSubmitData {
+        name: string;
+        email: string;
+        company: string;
+        industry: string;
+        preferredDate: string;
+        timezone: string;
+        jobTitle?: string;
+        phone?: string;
+        message?: string;
+      }
+
+      const submitData: DemoSubmitData = {
         name: formData.name,
         email: formData.email,
         company: formData.company,

@@ -5,7 +5,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { Textarea } from "@/components/ui/Textarea";
 import { Select } from "@/components/ui/Select";
 
 interface FormData {
@@ -145,7 +144,19 @@ export default function RiskBriefingForm() {
       const datetime = new Date(formData.preferredDate);
       datetime.setHours(hour, minute, 0, 0);
 
-      const submitData: Record<string, any> = {
+      interface SubmitData {
+        name: string;
+        email: string;
+        company: string;
+        industry: string;
+        preferredDate: string;
+        timezone: string;
+        type: string;
+        phone?: string;
+        message?: string;
+      }
+
+      const submitData: SubmitData = {
         name: formData.name,
         email: formData.email,
         company: formData.company,
