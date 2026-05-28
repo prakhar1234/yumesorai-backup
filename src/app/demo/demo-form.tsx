@@ -137,11 +137,19 @@ export default function DemoFormClient() {
       const datetime = new Date(formData.preferredDate);
       datetime.setHours(hour, minute, 0, 0);
 
-      const submitData = {
-        ...formData,
+      const submitData: Record<string, any> = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        industry: formData.industry,
         preferredDate: datetime.toISOString(),
         timezone: "EST",
       };
+
+      // Only include optional fields if they have a value
+      if (formData.jobTitle) submitData.jobTitle = formData.jobTitle;
+      if (formData.phone) submitData.phone = formData.phone;
+      if (formData.message) submitData.message = formData.message;
 
       const response = await fetch("/api/demo", {
         method: "POST",
