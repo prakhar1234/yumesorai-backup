@@ -133,6 +133,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SME & Medium Companies Focus */}
+      <section className="py-16 sm:py-24 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-indigo-950 sm:text-4xl">
+              Perfect for SMEs and Medium-Sized Companies
+            </h2>
+            <p className="mt-4 text-lg text-indigo-950/60">
+              You don't need to be a Fortune 500 company to modernize your legacy systems. We work with growing businesses that need enterprise-grade solutions.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Budget-Friendly Solutions",
+                description:
+                  "Flexible engagement models designed for companies of all sizes. Only pay for what you need, when you need it.",
+                icon: "💰",
+              },
+              {
+                title: "Faster Time to Value",
+                description:
+                  "Our proven methodology gets your systems modernized in months, not years. Competitive advantage when you need it most.",
+                icon: "⚡",
+              },
+              {
+                title: "Dedicated Support",
+                description:
+                  "Your team gets direct access to engineers and architects. We succeed when your business succeeds.",
+                icon: "🤝",
+              },
+              {
+                title: "Scalable Approach",
+                description:
+                  "Start small with one system, scale to your entire legacy portfolio as you grow. No lock-in, total flexibility.",
+                icon: "📈",
+              },
+              {
+                title: "Reduced Risk",
+                description:
+                  "AI-driven testing and zero-downtime migration mean less operational disruption to your business.",
+                icon: "✅",
+              },
+              {
+                title: "Knowledge Transfer",
+                description:
+                  "We don't just modernize—we upskill your team so you own the outcome and can maintain it independently.",
+                icon: "📚",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
+              >
+                <div className="text-3xl mb-3">{item.icon}</div>
+                <h3 className="text-lg font-semibold text-indigo-950">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-base text-indigo-950/60 mb-6">
+              Whether you're a 50-person startup or a 5,000-person growth company, we have solutions that fit your scale and budget.
+            </p>
+            <Link
+              href="/assessment"
+              className="inline-flex rounded-lg bg-coral px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-coral/25 transition-all hover:bg-coral-dark hover:shadow-xl"
+            >
+              Start Your Free Assessment
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Industry Solutions */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
