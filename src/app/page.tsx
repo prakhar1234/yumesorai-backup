@@ -147,7 +147,7 @@ export default function Home() {
               Why Modernize Now
             </h2>
             <p className="mt-4 text-lg text-indigo-950/60">
-              The pressure to modernize has never been higher. Legacy systems face mounting risks you can't ignore.
+              The pressure to modernize has never been higher. Legacy systems face mounting risks you cannot ignore.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function Home() {
                 Cybersecurity Risk
               </h3>
               <p className="text-sm text-indigo-950/70 leading-relaxed">
-                Legacy systems are prime targets. They can't be patched fast enough to keep up with modern threats. Every day they stay in production is another day exposed to attackers.
+                Legacy systems are prime targets. They cannot be patched fast enough to keep up with modern threats. Every day they stay in production is another day exposed to attackers.
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default function Home() {
                 Skills Gap
               </h3>
               <p className="text-sm text-indigo-950/70 leading-relaxed">
-                COBOL and mainframe engineers are retiring. Your institutional knowledge is walking out the door. Modernizing now preserves that expertise before it's lost forever.
+                COBOL and mainframe engineers are retiring. Your institutional knowledge is walking out the door. Modernizing now preserves that expertise before it is lost forever.
               </p>
             </div>
 
@@ -245,7 +245,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-base text-indigo-950/70 mb-6">
-              <span className="font-semibold">The math is simple:</span> Get the same or better results for half the price with Yumesorai's AI-driven approach.
+              <span className="font-semibold">The math is simple:</span> Get the same or better results for half the price with Yumesorai AI-driven approach.
             </p>
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function Home() {
               Perfect for SMEs and Medium-Sized Companies
             </h2>
             <p className="mt-4 text-lg text-indigo-950/60">
-              You don&apos;t need to be a Fortune 500 company to modernize your legacy systems. We work with growing businesses that need enterprise-grade solutions.
+              You do not need to be a Fortune 500 company to modernize your legacy systems. We work with growing businesses that need enterprise-grade solutions.
             </p>
           </div>
 
@@ -298,7 +298,7 @@ export default function Home() {
               {
                 title: "Knowledge Transfer",
                 description:
-                  "We don't just modernize—we upskill your team so you own the outcome and can maintain it independently.",
+                  "We do not just modernize—we upskill your team so you own the outcome and can maintain it independently.",
                 icon: "📚",
               },
             ].map((item) => (
@@ -482,7 +482,7 @@ export default function Home() {
                     Eliminate Legacy Vulnerabilities
                   </h3>
                   <p className="text-white/70">
-                    Legacy systems can't be patched fast enough. Our AI modernization removes the old code entirely, eliminating entire classes of vulnerabilities that attackers exploit.
+                    Legacy systems cannot be patched fast enough. Our AI modernization removes the old code entirely, eliminating entire classes of vulnerabilities that attackers exploit.
                   </p>
                 </div>
               </div>
@@ -533,7 +533,7 @@ export default function Home() {
 
           <div className="mt-12 rounded-xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
             <p className="text-center text-white mb-4">
-              <span className="font-semibold">The Reality:</span> Every day your legacy systems stay in production is a day they're exposed to new threats. Modernization isn't just about velocity—it's about survival.
+              <span className="font-semibold">The Reality:</span> Every day your legacy systems stay in production is a day they are exposed to new threats. Modernization is not just about velocity—it is about survival.
             </p>
           </div>
         </div>
