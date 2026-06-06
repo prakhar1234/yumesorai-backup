@@ -25,7 +25,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-indigo-950/5 bg-offwhite/80 backdrop-blur-lg">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
         aria-label="Primary navigation"
       >
         {/* Logo */}
@@ -33,9 +33,9 @@ export function Header() {
           <Image
             src="/images/logos/yumesorai-logo-main.jpeg"
             alt="Yumesorai"
-            width={180}
-            height={60}
-            className="h-10 w-auto"
+            width={240}
+            height={80}
+            className="h-16 w-auto"
             priority
           />
         </Link>
