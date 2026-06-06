@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Hero3DBackground } from "@/components/Hero3DBackground";
+import { Card3DEffect } from "@/components/3DCardEffect";
 
 const industryCards = [
   {
@@ -301,18 +302,19 @@ export default function Home() {
                 icon: "📚",
               },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
-              >
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-indigo-950">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
-                  {item.description}
-                </p>
-              </div>
+              <Card3DEffect key={item.title}>
+                <div
+                  className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
+                >
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <h3 className="text-lg font-semibold text-indigo-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
+                    {item.description}
+                  </p>
+                </div>
+              </Card3DEffect>
             ))}
           </div>
 
@@ -371,27 +373,28 @@ export default function Home() {
 
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {industryCards.map((card) => (
-              <Link
-                key={card.title}
-                href={card.href}
-                className="group relative rounded-2xl border border-indigo-950/5 bg-white p-8 shadow-sm transition-all hover:border-coral/20 hover:shadow-lg"
-              >
-                <div className="mb-4 inline-flex rounded-xl bg-indigo-950/5 p-3 text-indigo-950 transition-colors group-hover:bg-coral/10 group-hover:text-coral">
-                  {card.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-indigo-950">
-                  {card.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
-                  {card.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-coral opacity-0 transition-opacity group-hover:opacity-100">
-                  Learn more
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </Link>
+              <Card3DEffect key={card.title}>
+                <Link
+                  href={card.href}
+                  className="group relative rounded-2xl border border-indigo-950/5 bg-white p-8 shadow-sm transition-all hover:border-coral/20 hover:shadow-lg"
+                >
+                  <div className="mb-4 inline-flex rounded-xl bg-indigo-950/5 p-3 text-indigo-950 transition-colors group-hover:bg-coral/10 group-hover:text-coral">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-indigo-950">
+                    {card.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
+                    {card.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-coral opacity-0 transition-opacity group-hover:opacity-100">
+                    Learn more
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </span>
+                </Link>
+              </Card3DEffect>
             ))}
           </div>
         </div>
@@ -443,15 +446,16 @@ export default function Home() {
                   "We extract and document decades of embedded business logic before your retiring workforce takes it with them.",
               },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-xl border border-white/10 p-6"
-              >
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/60">
-                  {item.description}
-                </p>
-              </div>
+              <Card3DEffect key={item.title}>
+                <div
+                  className="rounded-xl border border-white/10 p-6"
+                >
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    {item.description}
+                  </p>
+                </div>
+              </Card3DEffect>
             ))}
           </div>
         </div>
