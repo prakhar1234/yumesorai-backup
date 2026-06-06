@@ -340,6 +340,84 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Security & Vulnerability Risk Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-indigo-950 to-indigo-900">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+              Reduce Vulnerability Risk in the Age of Cyberattacks
+            </h2>
+            <p className="text-lg text-white/70">
+              Legacy systems are a liability. Yumesorai's AI-driven modernization eliminates security vulnerabilities while keeping your business operational.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">🛡️</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Eliminate Legacy Vulnerabilities
+                  </h3>
+                  <p className="text-white/70">
+                    Legacy systems can't be patched fast enough. Our AI modernization removes the old code entirely, eliminating entire classes of vulnerabilities that attackers exploit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">🤖</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    AI-Powered Security Scanning
+                  </h3>
+                  <p className="text-white/70">
+                    Our AI analyzes every line of code during modernization, identifying and fixing security flaws that traditional tools miss. Modern frameworks include security by default.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">🔐</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Modern Compliance & Encryption
+                  </h3>
+                  <p className="text-white/70">
+                    Modernized systems include current encryption standards, automated compliance frameworks, and threat detection. No more fighting to meet NIST, PCI-DSS, or HIPAA requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">⚡</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Faster Security Patching
+                  </h3>
+                  <p className="text-white/70">
+                    Modern cloud-native systems can be patched in minutes, not months. Security updates deploy automatically without business interruption.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 rounded-xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
+            <p className="text-center text-white mb-4">
+              <span className="font-semibold">The Reality:</span> Every day your legacy systems stay in production is a day they're exposed to new threats. Modernization isn't just about velocity—it's about survival.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
