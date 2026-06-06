@@ -213,6 +213,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Reality Check Section */}
+      <section className="py-16 sm:py-24 bg-red-50/30 border-y border-red-200/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-xl border border-red-200/50 bg-white p-8 sm:p-12">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">⚠️</div>
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-indigo-950 mb-4">
+                    The Hard Truth About Legacy Modernization
+                  </h2>
+                  <div className="space-y-4">
+                    <p className="text-base sm:text-lg text-indigo-950">
+                      <span className="font-semibold">Not everyone cares for SMEs or medium-sized companies</span> — and the cost of migration is prohibitively high for most organizations. Traditional modernization approaches cost $5-15M and take 3-5 years, making them inaccessible to anyone outside Fortune 500 companies.
+                    </p>
+                    <p className="text-base text-indigo-950/70">
+                      This is exactly why Yumesorai exists. Our AI-powered approach <span className="font-semibold text-coral">reduces migration costs by 60-70%</span> and cuts timelines from years to months. We've made enterprise-grade modernization accessible to companies of all sizes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industry Solutions */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
