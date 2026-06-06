@@ -133,6 +133,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Modernize Now Section */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-indigo-950 sm:text-4xl">
+              Why Modernize Now
+            </h2>
+            <p className="mt-4 text-lg text-indigo-950/60">
+              The pressure to modernize has never been higher. Legacy systems face mounting risks you can't ignore.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-3">
+            <div className="rounded-xl border border-red-200/30 bg-red-50/50 p-6 hover:shadow-lg transition-all">
+              <div className="text-4xl mb-4">🚨</div>
+              <h3 className="text-lg font-semibold text-indigo-950 mb-3">
+                Cybersecurity Risk
+              </h3>
+              <p className="text-sm text-indigo-950/70 leading-relaxed">
+                Legacy systems are prime targets. They can't be patched fast enough to keep up with modern threats. Every day they stay in production is another day exposed to attackers.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-orange-200/30 bg-orange-50/50 p-6 hover:shadow-lg transition-all">
+              <div className="text-4xl mb-4">⏰</div>
+              <h3 className="text-lg font-semibold text-indigo-950 mb-3">
+                Skills Gap
+              </h3>
+              <p className="text-sm text-indigo-950/70 leading-relaxed">
+                COBOL and mainframe engineers are retiring. Your institutional knowledge is walking out the door. Modernizing now preserves that expertise before it's lost forever.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-yellow-200/30 bg-yellow-50/50 p-6 hover:shadow-lg transition-all">
+              <div className="text-4xl mb-4">💸</div>
+              <h3 className="text-lg font-semibold text-indigo-950 mb-3">
+                Rising Costs
+              </h3>
+              <p className="text-sm text-indigo-950/70 leading-relaxed">
+                Maintenance and support for legacy systems grows every year. Cloud-native alternatives cost less to operate and scale automatically with your business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SME & Medium Companies Focus */}
       <section className="py-16 sm:py-24 bg-gradient-to-r from-indigo-50 to-blue-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
