@@ -374,11 +374,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-indigo-950 sm:text-4xl">
-              Purpose-built for regulated industries
+              Serving All Industries & Business Sizes
             </h2>
             <p className="mt-4 text-lg text-indigo-950/60">
-              We specialize in the industries where legacy systems are most
-              deeply entrenched and the stakes for modernization are highest.
+              From regulated industries to retail shops and small businesses, we transform legacy systems across all sectors. Our solutions scale to any business size—whether you are a Fortune 100 enterprise or a growing small business.
             </p>
           </div>
 
@@ -407,6 +406,13 @@ export default function Home() {
                 </Link>
               </Card3DEffect>
             ))}
+          </div>
+
+          {/* Additional Industries Note */}
+          <div className="mt-12 rounded-xl border border-indigo-950/10 bg-indigo-50/50 p-8">
+            <p className="text-center text-indigo-950">
+              <span className="font-semibold">Not limited to these sectors:</span> Our solutions extend to retail shops, e-commerce platforms, manufacturing, logistics, education, hospitality, and countless other industries. Whether you are a small retail business with legacy POS systems or a mid-sized company with aging software, Yumesorai can modernize your legacy systems affordably and efficiently.
+            </p>
           </div>
         </div>
       </section>
