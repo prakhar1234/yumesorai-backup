@@ -140,13 +140,13 @@ export default function Home() {
       </section>
 
       {/* SME & MSME Focus Banner */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-              🎯 Focused on SME & MSME Legacy Code Migration
+              Focused on SME & MSME Legacy Code Migration
             </h2>
-            <p className="text-white/90 text-sm sm:text-base max-w-2xl mx-auto">
+            <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
               While others focus on Fortune 500 companies, Yumesorai specializes in transforming legacy systems for Small & Medium Enterprises (SME) and Micro, Small & Medium Enterprises (MSME). We make enterprise-grade modernization affordable and accessible for growing businesses.
             </p>
           </div>
