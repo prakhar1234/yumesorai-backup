@@ -280,44 +280,37 @@ export default function Home() {
                 title: "Budget-Friendly Solutions",
                 description:
                   "Flexible engagement models designed for companies of all sizes. Only pay for what you need, when you need it.",
-                icon: "💰",
               },
               {
                 title: "Faster Time to Value",
                 description:
                   "Our proven methodology gets your systems modernized in months, not years. Competitive advantage when you need it most.",
-                icon: "⚡",
               },
               {
                 title: "Dedicated Support",
                 description:
                   "Your team gets direct access to engineers and architects. We succeed when your business succeeds.",
-                icon: "🤝",
               },
               {
                 title: "Scalable Approach",
                 description:
                   "Start small with one system, scale to your entire legacy portfolio as you grow. No lock-in, total flexibility.",
-                icon: "📈",
               },
               {
                 title: "Reduced Risk",
                 description:
                   "AI-driven testing and zero-downtime migration mean less operational disruption to your business.",
-                icon: "✅",
               },
               {
                 title: "Knowledge Transfer",
                 description:
                   "We do not just modernize—we upskill your team so you own the outcome and can maintain it independently.",
-                icon: "📚",
               },
             ].map((item) => (
               <Card3DEffect key={item.title}>
                 <div
                   className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
                 >
-                  <div className="text-3xl mb-3">{item.icon}</div>
                   <h3 className="text-lg font-semibold text-indigo-950">
                     {item.title}
                   </h3>
