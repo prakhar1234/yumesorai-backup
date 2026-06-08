@@ -39,9 +39,9 @@ const industryCards = [
 ];
 
 const proofMetrics = [
+  { value: "1M+", label: "Lines of COBOL code migrated by our team" },
   { value: "50%", label: "Cheaper than competitors" },
   { value: "40%", label: "Average cost reduction" },
-  { value: "10x", label: "Faster deployments" },
   { value: "99.99%", label: "Migration accuracy" },
 ];
 
