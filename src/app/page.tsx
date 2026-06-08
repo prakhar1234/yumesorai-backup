@@ -370,7 +370,7 @@ export default function Home() {
       </section>
 
       {/* Industry Solutions */}
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-white to-indigo-50/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-indigo-950 sm:text-4xl">
@@ -386,7 +386,7 @@ export default function Home() {
               <Card3DEffect key={card.title}>
                 <Link
                   href={card.href}
-                  className="group relative rounded-2xl border border-indigo-950/5 bg-white p-8 shadow-sm transition-all hover:border-coral/20 hover:shadow-lg"
+                  className="group relative rounded-2xl border border-indigo-950/10 bg-gradient-to-br from-white to-indigo-50/40 p-8 shadow-md transition-all hover:border-coral/30 hover:shadow-xl"
                 >
                   <div className="mb-4 inline-flex rounded-xl bg-indigo-950/5 p-3 text-indigo-950 transition-colors group-hover:bg-coral/10 group-hover:text-coral">
                     {card.icon}
@@ -409,8 +409,8 @@ export default function Home() {
           </div>
 
           {/* Additional Industries Note */}
-          <div className="mt-12 rounded-xl border border-indigo-950/10 bg-indigo-50/50 p-8">
-            <p className="text-center text-indigo-950">
+          <div className="mt-12 rounded-xl border border-indigo-950/15 bg-gradient-to-r from-indigo-50/60 to-blue-50/60 p-8 shadow-sm">
+            <p className="text-center text-indigo-950/80">
               <span className="font-semibold">Not limited to these sectors:</span> Our solutions extend to retail shops, e-commerce platforms, manufacturing, logistics, education, hospitality, and countless other industries. Whether you are a small retail business with legacy POS systems or a mid-sized company with aging software, Yumesorai can modernize your legacy systems affordably and efficiently.
             </p>
           </div>
