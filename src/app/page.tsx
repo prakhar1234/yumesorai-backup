@@ -46,7 +46,7 @@ const proofMetrics = [
 ];
 
 const trustedBy = [
-  "Fortune 500 Healthcare",
+  "Fortune 100 Healthcare",
   "Global Airlines",
   "Top 10 Banks",
   "Federal Agencies",
@@ -68,7 +68,7 @@ export default function Home() {
             {/* Trust signal */}
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-950/10 bg-white px-4 py-1.5 text-xs font-medium text-indigo-950/60 shadow-sm">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-green-500" />
-              Team of engineers who have migrated big systems in Fortune 500 companies
+              Team of engineers who have migrated big systems in Fortune 100 companies
             </p>
 
             {/* Headline */}
@@ -259,7 +259,7 @@ export default function Home() {
               Perfect for SMEs and Medium-Sized Companies
             </h2>
             <p className="mt-4 text-lg text-indigo-950/60">
-              You do not need to be a Fortune 500 company to modernize your legacy systems. We work with growing businesses that need enterprise-grade solutions.
+              You do not need to be a Fortune 100 company to modernize your legacy systems. We work with growing businesses that need enterprise-grade solutions.
             </p>
           </div>
 
@@ -345,7 +345,7 @@ export default function Home() {
                   </h2>
                   <div className="space-y-4">
                     <p className="text-base sm:text-lg text-indigo-950">
-                      <span className="font-semibold">Not everyone cares for SMEs or medium-sized companies</span> — and the cost of migration is prohibitively high for most organizations. Traditional modernization approaches cost $5-15M and take 3-5 years, making them inaccessible to anyone outside Fortune 500 companies.
+                      <span className="font-semibold">Not everyone cares for SMEs or medium-sized companies</span> — and the cost of migration is prohibitively high for most organizations. Traditional modernization approaches cost $5-15M and take 3-5 years, making them inaccessible to anyone outside Fortune 100 companies.
                     </p>
                     <p className="text-base text-indigo-950/70">
                       This is exactly why Yumesorai exists. Our AI-powered approach <span className="font-semibold text-coral">reduces migration costs by 60-70%</span> and cuts timelines from years to months. We've made enterprise-grade modernization accessible to companies of all sizes.
