@@ -52,7 +52,7 @@ export function Hero3DBackground() {
         <div
           key={i}
           data-cube
-          className="absolute w-32 h-32 opacity-10 transition-transform duration-100"
+          className="absolute w-16 h-16 opacity-10 transition-transform duration-100"
           style={{
             left: `${20 + i * 15}%`,
             top: `${10 + (i % 3) * 20}%`,
@@ -67,12 +67,12 @@ export function Hero3DBackground() {
               className="absolute w-full h-full border-2 border-coral/30 bg-gradient-to-br from-coral/5 to-indigo-950/5 backdrop-blur-sm"
               style={{
                 transform: [
-                  'translateZ(64px)',
-                  'rotateY(180deg) translateZ(64px)',
-                  'rotateY(90deg) translateZ(64px)',
-                  'rotateY(-90deg) translateZ(64px)',
-                  'rotateX(90deg) translateZ(64px)',
-                  'rotateX(-90deg) translateZ(64px)',
+                  'translateZ(32px)',
+                  'rotateY(180deg) translateZ(32px)',
+                  'rotateY(90deg) translateZ(32px)',
+                  'rotateY(-90deg) translateZ(32px)',
+                  'rotateX(90deg) translateZ(32px)',
+                  'rotateX(-90deg) translateZ(32px)',
                 ][face],
               }}
             />
