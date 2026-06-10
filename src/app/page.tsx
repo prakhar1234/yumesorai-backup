@@ -126,7 +126,7 @@ export default function Home() {
               Why Modernize Now
             </h2>
             <p className="text-xl text-indigo-950/70">
-              The pressure to modernize has never been higher. Legacy systems face mounting risks you cannot ignore.
+              Your COBOL-based processes were never more vulnerable and COBOL developers are only reducing in the market.
             </p>
           </div>
 
