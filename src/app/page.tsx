@@ -118,20 +118,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SME & MSME Focus Banner */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-indigo-950 mb-4">
-              Focused on SME & MSME Legacy Code Migration
-            </h2>
-            <p className="text-indigo-950/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Enterprise-grade legacy modernization designed for SMEs and MSMEs at prices that fit their budgets.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Why Modernize Now Section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -171,6 +157,20 @@ export default function Home() {
                 Maintenance and support for legacy systems grows every year. Cloud-native alternatives cost less to operate and scale automatically with your business.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SME & MSME Focus Banner */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-indigo-950 mb-4">
+              Focused on SME & MSME Legacy Code Migration
+            </h2>
+            <p className="text-indigo-950/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+              Enterprise-grade legacy modernization designed for SMEs and MSMEs at prices that fit their budgets.
+            </p>
           </div>
         </div>
       </section>
