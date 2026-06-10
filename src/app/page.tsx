@@ -142,7 +142,7 @@ export default function Home() {
               Focused on SME & MSME Legacy Code Migration
             </h2>
             <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-              While others focus on Fortune 500 companies, Yumesorai specializes in transforming legacy systems for Small & Medium Enterprises (SME) and Micro, Small & Medium Enterprises (MSME). We make enterprise-grade modernization affordable and accessible for growing businesses.
+              Enterprise-grade legacy modernization designed for SMEs and MSMEs at prices Fortune 500 companies cannot match.
             </p>
           </div>
         </div>
