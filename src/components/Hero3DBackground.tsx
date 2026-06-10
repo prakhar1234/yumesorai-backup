@@ -64,26 +64,26 @@ export function Hero3DBackground() {
               transform: `rotateX(${i * 30}deg) rotateY(${i * 45}deg)`,
             }}
           >
-          {/* Cube faces */}
-          {[...Array(6)].map((_, face) => (
-            <div
-              key={face}
-              className="absolute w-full h-full border-2 border-coral/30 bg-gradient-to-br from-coral/5 to-indigo-950/5 backdrop-blur-sm"
-              style={{
-                transform: [
-                  'translateZ(32px)',
-                  'rotateY(180deg) translateZ(32px)',
-                  'rotateY(90deg) translateZ(32px)',
-                  'rotateY(-90deg) translateZ(32px)',
-                  'rotateX(90deg) translateZ(32px)',
-                  'rotateX(-90deg) translateZ(32px)',
-                ][face],
-              }}
-            />
-          ))}
-            </div>
-          );
-        })}
+            {/* Cube faces */}
+            {[...Array(6)].map((_, face) => (
+              <div
+                key={face}
+                className="absolute w-full h-full border-2 border-coral/30 bg-gradient-to-br from-coral/5 to-indigo-950/5 backdrop-blur-sm"
+                style={{
+                  transform: [
+                    'translateZ(32px)',
+                    'rotateY(180deg) translateZ(32px)',
+                    'rotateY(90deg) translateZ(32px)',
+                    'rotateY(-90deg) translateZ(32px)',
+                    'rotateX(90deg) translateZ(32px)',
+                    'rotateX(-90deg) translateZ(32px)',
+                  ][face],
+                }}
+              />
+            ))}
+          </div>
+        );
+      })}
 
       {/* Gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/5" />
