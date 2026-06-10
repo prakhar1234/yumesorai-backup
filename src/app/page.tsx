@@ -113,7 +113,7 @@ export default function Home() {
                 <p className="text-3xl font-bold text-indigo-950 sm:text-4xl">
                   {metric.value}
                 </p>
-                <p className="mt-1 text-sm text-indigo-950/50">
+                <p className="mt-3 text-base font-medium text-indigo-950/70">
                   {metric.label}
                 </p>
               </div>
