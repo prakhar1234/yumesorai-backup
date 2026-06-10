@@ -44,13 +44,6 @@ const proofMetrics = [
   { value: "99.99%", label: "Migration accuracy" },
 ];
 
-const trustedBy = [
-  "Fortune 100 Healthcare",
-  "Global Airlines",
-  "Top 10 Banks",
-  "Federal Agencies",
-];
-
 export default function Home() {
   return (
     <>
@@ -126,7 +119,7 @@ export default function Home() {
               Why Modernize Now
             </h2>
             <p className="text-xl font-semibold text-indigo-950">
-              New age AI models can now attack your infrastructure with precision you've never seen before.
+              New age AI models can now attack your infrastructure with precision you have never seen before.
             </p>
           </div>
 
@@ -164,13 +157,61 @@ export default function Home() {
       {/* SME & MSME Focus Banner */}
       <section className="py-16 sm:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-indigo-950 mb-6">
               Focused on SME & MSME Legacy Code Migration
             </h2>
-            <p className="text-indigo-950/85 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="text-indigo-950/85 text-lg sm:text-xl font-bold max-w-3xl mx-auto leading-relaxed">
               Enterprise-grade legacy modernization designed for SMEs and MSMEs at prices that fit their budgets.
             </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Budget-Friendly Solutions",
+                description:
+                  "Flexible engagement models designed for companies of all sizes. Only pay for what you need, when you need it.",
+              },
+              {
+                title: "Faster Time to Value",
+                description:
+                  "Our proven methodology gets your systems modernized in months, not years. Competitive advantage when you need it most.",
+              },
+              {
+                title: "Dedicated Support",
+                description:
+                  "Your team gets direct access to engineers and architects. We succeed when your business succeeds.",
+              },
+              {
+                title: "Scalable Approach",
+                description:
+                  "Start small with one system, scale to your entire legacy portfolio as you grow. No lock-in, total flexibility.",
+              },
+              {
+                title: "Reduced Risk",
+                description:
+                  "AI-driven testing and zero-downtime migration mean less operational disruption to your business.",
+              },
+              {
+                title: "Knowledge Transfer",
+                description:
+                  "We do not just modernize—we upskill your team so you own the outcome and can maintain it independently.",
+              },
+            ].map((item) => (
+              <Card3DEffect key={item.title}>
+                <div
+                  className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
+                >
+                  <h3 className="text-lg font-semibold text-indigo-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
+                    {item.description}
+                  </p>
+                </div>
+              </Card3DEffect>
+            ))}
           </div>
         </div>
       </section>
@@ -183,7 +224,7 @@ export default function Home() {
               50% Cheaper Than Traditional Solutions
             </h2>
             <p className="text-lg text-indigo-950/70">
-              Don't pay legacy prices for legacy problems. Yumesorai delivers enterprise-grade modernization at half the cost of traditional consulting firms.
+              Do not pay legacy prices for legacy problems. Yumesorai delivers enterprise-grade modernization at half the cost of traditional consulting firms.
             </p>
           </div>
 
@@ -241,80 +282,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SME & Medium Companies Focus */}
-      <section className="py-16 sm:py-24 bg-gradient-to-r from-indigo-50 to-blue-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-indigo-950 sm:text-4xl">
-              Perfect for SMEs and Medium-Sized Companies
-            </h2>
-            <p className="mt-4 text-lg text-indigo-950/60">
-              You do not need to be a Fortune 100 company to modernize your legacy systems. We work with growing businesses that need enterprise-grade solutions.
-            </p>
-          </div>
-
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Budget-Friendly Solutions",
-                description:
-                  "Flexible engagement models designed for companies of all sizes. Only pay for what you need, when you need it.",
-              },
-              {
-                title: "Faster Time to Value",
-                description:
-                  "Our proven methodology gets your systems modernized in months, not years. Competitive advantage when you need it most.",
-              },
-              {
-                title: "Dedicated Support",
-                description:
-                  "Your team gets direct access to engineers and architects. We succeed when your business succeeds.",
-              },
-              {
-                title: "Scalable Approach",
-                description:
-                  "Start small with one system, scale to your entire legacy portfolio as you grow. No lock-in, total flexibility.",
-              },
-              {
-                title: "Reduced Risk",
-                description:
-                  "AI-driven testing and zero-downtime migration mean less operational disruption to your business.",
-              },
-              {
-                title: "Knowledge Transfer",
-                description:
-                  "We do not just modernize—we upskill your team so you own the outcome and can maintain it independently.",
-              },
-            ].map((item) => (
-              <Card3DEffect key={item.title}>
-                <div
-                  className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
-                >
-                  <h3 className="text-lg font-semibold text-indigo-950">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-indigo-950/60">
-                    {item.description}
-                  </p>
-                </div>
-              </Card3DEffect>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-base text-indigo-950/60 mb-6">
-              Whether you&apos;re a 50-person startup or a 5,000-person growth company, we have solutions that fit your scale and budget.
-            </p>
-            <Link
-              href="/assessment"
-              className="inline-flex rounded-lg bg-coral px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-coral/25 transition-all hover:bg-coral-dark hover:shadow-xl"
-            >
-              Start Your Free Assessment
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* The Reality Check Section */}
       <section className="py-16 sm:py-24 bg-red-50/30 border-y border-red-200/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -331,7 +298,7 @@ export default function Home() {
                       <span className="font-semibold">Not everyone cares for SMEs or medium-sized companies</span> — and the cost of migration is prohibitively high for most organizations. Traditional modernization approaches cost $5-15M and take 3-5 years, making them inaccessible to anyone outside Fortune 100 companies.
                     </p>
                     <p className="text-base text-indigo-950/70">
-                      This is exactly why Yumesorai exists. Our AI-powered approach <span className="font-semibold text-coral">reduces migration costs by 60-70%</span> and cuts timelines from years to months. We've made enterprise-grade modernization accessible to companies of all sizes.
+                      This is exactly why Yumesorai exists. Our AI-powered approach <span className="font-semibold text-coral">reduces migration costs by 60-70%</span> and cuts timelines from years to months. We have made enterprise-grade modernization accessible to companies of all sizes.
                     </p>
                   </div>
                 </div>
@@ -458,7 +425,7 @@ export default function Home() {
               Reduce Vulnerability Risk in the Age of Cyberattacks
             </h2>
             <p className="text-lg text-white/70">
-              Legacy systems are a liability. Yumesorai's AI-driven modernization eliminates security vulnerabilities while keeping your business operational.
+              Legacy systems are a liability. The Yumesorai AI-driven modernization eliminates security vulnerabilities while keeping your business operational.
             </p>
           </div>
 
