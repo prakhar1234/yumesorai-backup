@@ -115,24 +115,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Trusted by logos placeholder - Hidden for now */}
-          {/* <div className="mt-10 border-t border-indigo-950/5 pt-8">
-            <p className="mb-8 text-center text-base font-bold uppercase tracking-widest text-indigo-950/70">
-              Trusted by industry leaders
-            </p>
-            <div className="grid grid-cols-2 gap-6 mx-auto max-w-md">
-              {trustedBy.map((name) => (
-                <div
-                  key={name}
-                  className="text-center"
-                >
-                  <span className="text-lg font-bold text-indigo-950/80">
-                    {name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div> */
         </div>
       </section>
 
