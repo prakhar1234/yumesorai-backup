@@ -201,7 +201,7 @@ export default function Home() {
             ].map((item) => (
               <Card3DEffect key={item.title}>
                 <div
-                  className="rounded-xl border border-indigo-950/10 bg-white p-6 hover:border-coral/30 hover:shadow-lg transition-all"
+                  className="rounded-xl border-2 border-indigo-950/40 bg-white p-6 hover:border-coral hover:shadow-lg transition-all"
                 >
                   <h3 className="text-lg font-semibold text-indigo-950">
                     {item.title}
