@@ -125,11 +125,11 @@ export default function Home() {
             <h2 className="text-4xl font-bold tracking-tight text-indigo-950 sm:text-5xl mb-6">
               Why Modernize Now
             </h2>
-            <p className="text-xl text-indigo-950/70">
-              Your COBOL-based processes were never more vulnerable and COBOL developers are only reducing in the market.
-            </p>
-            <p className="text-lg font-semibold text-red-600 mt-6">
+            <p className="text-xl font-semibold text-indigo-950 mb-6">
               New age AI models can now attack your infrastructure with precision you've never seen before.
+            </p>
+            <p className="text-lg text-indigo-950/75">
+              Your COBOL-based processes were never more vulnerable and COBOL developers are only reducing in the market.
             </p>
           </div>
 
