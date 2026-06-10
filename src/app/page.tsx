@@ -485,6 +485,20 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">🎯</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Mythos AI Vulnerability Detection
+                  </h3>
+                  <p className="text-white/70">
+                    Our Mythos AI model identifies vulnerabilities that have remained dormant for decades but are now exposed to modern threats. Detect and remediate hidden risks before attackers do.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 rounded-xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
