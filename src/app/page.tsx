@@ -120,14 +120,16 @@ export default function Home() {
             <p className="mb-8 text-center text-base font-bold uppercase tracking-widest text-indigo-950/70">
               Trusted by industry leaders
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            <div className="grid grid-cols-2 gap-6 mx-auto max-w-md">
               {trustedBy.map((name) => (
-                <span
+                <div
                   key={name}
-                  className="text-lg font-bold text-indigo-950/80"
+                  className="text-center"
                 >
-                  {name}
-                </span>
+                  <span className="text-lg font-bold text-indigo-950/80">
+                    {name}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
