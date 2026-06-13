@@ -230,6 +230,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Industries We Serve Section */}
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-indigo-50/40 to-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight text-indigo-950 sm:text-5xl mb-6">
+              Broad Spectrum of Industries We Serve
+            </h2>
+            <p className="text-xl text-indigo-950/70">
+              From Fortune 500 enterprises to growing SMEs, we modernize legacy systems across every sector
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { name: 'Healthcare', icon: '🏥' },
+              { name: 'Banking & Finance', icon: '🏦' },
+              { name: 'Airlines & Travel', icon: '✈️' },
+              { name: 'Retail & E-commerce', icon: '🛒' },
+              { name: 'Manufacturing', icon: '🏭' },
+              { name: 'Insurance', icon: '📋' },
+              { name: 'Government', icon: '🏛️' },
+              { name: 'Telecommunications', icon: '📞' },
+              { name: 'Logistics', icon: '📦' },
+              { name: 'Energy & Utilities', icon: '⚡' },
+              { name: 'Education', icon: '🎓' },
+              { name: 'Media & Publishing', icon: '📰' },
+            ].map((industry) => (
+              <div key={industry.name} className="card-fade-in rounded-xl border border-indigo-950/10 bg-gradient-to-br from-white to-indigo-50/30 p-6 text-center hover:border-coral/30 hover:shadow-lg transition-all">
+                <div className="text-4xl mb-3">{industry.icon}</div>
+                <h3 className="font-semibold text-indigo-950">{industry.name}</h3>
+              </div>
+            ))}
+          </div>
+
+          {/* Business Sizes */}
+          <div className="mt-16 pt-16 border-t border-indigo-950/10">
+            <h3 className="text-2xl font-bold tracking-tight text-indigo-950 text-center mb-8">
+              All Business Sizes
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-6 text-center hover:shadow-md transition-all">
+                <p className="text-sm font-semibold uppercase tracking-wide text-coral mb-2">Startups</p>
+                <p className="font-medium text-indigo-950">10-50 employees</p>
+              </div>
+              <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-6 text-center hover:shadow-md transition-all">
+                <p className="text-sm font-semibold uppercase tracking-wide text-coral mb-2">SMEs</p>
+                <p className="font-medium text-indigo-950">50-500 employees</p>
+              </div>
+              <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-6 text-center hover:shadow-md transition-all">
+                <p className="text-sm font-semibold uppercase tracking-wide text-coral mb-2">Mid-Market</p>
+                <p className="font-medium text-indigo-950">500-2,500 employees</p>
+              </div>
+              <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-6 text-center hover:shadow-md transition-all">
+                <p className="text-sm font-semibold uppercase tracking-wide text-coral mb-2">Enterprise</p>
+                <p className="font-medium text-indigo-950">2,500+ employees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Modernize Now Section */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
