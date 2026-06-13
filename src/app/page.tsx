@@ -230,6 +230,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Modernize Now Section */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight text-indigo-950 sm:text-5xl mb-6">
+              Why Modernize Now
+            </h2>
+            <p className="text-xl font-semibold text-indigo-950">
+              New age AI models can now attack your infrastructure with precision you have never seen before.
+            </p>
+          </div>
+
+          <div className="grid gap-10 sm:grid-cols-3">
+            <div className="rounded-xl border border-red-200/40 bg-red-50/60 p-8 hover:shadow-lg transition-all">
+              <div className="text-5xl font-bold text-red-600 mb-2">60%</div>
+              <p className="text-sm text-indigo-950/60 mb-4">of data breaches involve legacy systems</p>
+              <h3 className="text-lg font-bold text-indigo-950 mb-3">
+                Cybersecurity Risk
+              </h3>
+              <p className="text-sm text-indigo-950/70">
+                Legacy systems cannot patch vulnerabilities fast enough for modern threats.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-orange-200/40 bg-orange-50/60 p-8 hover:shadow-lg transition-all">
+              <div className="text-5xl font-bold text-orange-600 mb-2">45%</div>
+              <p className="text-sm text-indigo-950/60 mb-4">of COBOL developers retiring by 2030</p>
+              <h3 className="text-lg font-bold text-indigo-950 mb-3">
+                Skills Gap
+              </h3>
+              <p className="text-sm text-indigo-950/70">
+                Critical expertise is leaving your organization permanently.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-yellow-200/40 bg-yellow-50/60 p-8 hover:shadow-lg transition-all">
+              <div className="text-5xl font-bold text-yellow-600 mb-2">30%</div>
+              <p className="text-sm text-indigo-950/60 mb-4">annual increase in legacy system costs</p>
+              <h3 className="text-lg font-bold text-indigo-950 mb-3">
+                Rising Costs
+              </h3>
+              <p className="text-sm text-indigo-950/70">
+                Maintenance budgets grow every year while ROI shrinks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industries We Serve Section */}
       <section className="py-20 sm:py-28 bg-gradient-to-b from-indigo-50/40 to-white overflow-hidden">
         <style>{`
@@ -354,55 +403,6 @@ export default function Home() {
                   <p className="font-semibold text-indigo-950 text-lg">{size.range}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Modernize Now Section */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-4xl font-bold tracking-tight text-indigo-950 sm:text-5xl mb-6">
-              Why Modernize Now
-            </h2>
-            <p className="text-xl font-semibold text-indigo-950">
-              New age AI models can now attack your infrastructure with precision you have never seen before.
-            </p>
-          </div>
-
-          <div className="grid gap-10 sm:grid-cols-3">
-            <div className="rounded-xl border border-red-200/40 bg-red-50/60 p-8 hover:shadow-lg transition-all">
-              <div className="text-5xl font-bold text-red-600 mb-2">60%</div>
-              <p className="text-sm text-indigo-950/60 mb-4">of data breaches involve legacy systems</p>
-              <h3 className="text-lg font-bold text-indigo-950 mb-3">
-                Cybersecurity Risk
-              </h3>
-              <p className="text-sm text-indigo-950/70">
-                Legacy systems cannot patch vulnerabilities fast enough for modern threats.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-orange-200/40 bg-orange-50/60 p-8 hover:shadow-lg transition-all">
-              <div className="text-5xl font-bold text-orange-600 mb-2">45%</div>
-              <p className="text-sm text-indigo-950/60 mb-4">of COBOL developers retiring by 2030</p>
-              <h3 className="text-lg font-bold text-indigo-950 mb-3">
-                Skills Gap
-              </h3>
-              <p className="text-sm text-indigo-950/70">
-                Critical expertise is leaving your organization permanently.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-yellow-200/40 bg-yellow-50/60 p-8 hover:shadow-lg transition-all">
-              <div className="text-5xl font-bold text-yellow-600 mb-2">30%</div>
-              <p className="text-sm text-indigo-950/60 mb-4">annual increase in legacy system costs</p>
-              <h3 className="text-lg font-bold text-indigo-950 mb-3">
-                Rising Costs
-              </h3>
-              <p className="text-sm text-indigo-950/70">
-                Maintenance budgets grow every year while ROI shrinks.
-              </p>
             </div>
           </div>
         </div>
