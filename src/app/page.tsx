@@ -512,11 +512,73 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Additional Industries Note */}
-          <div className="mt-12 rounded-xl border border-indigo-950/15 bg-gradient-to-r from-indigo-50/60 to-blue-50/60 p-8 shadow-sm">
-            <p className="text-center text-indigo-950/80">
-              <span className="font-semibold">Not limited to these sectors:</span> Our solutions extend to retail shops, e-commerce platforms, manufacturing, logistics, education, hospitality, and countless other industries. Whether you are a small retail business with legacy POS systems or a mid-sized company with aging software, Yumesorai can modernize your legacy systems affordably and efficiently.
-            </p>
+          {/* Additional Industries & Company Sizes */}
+          <div className="mt-12 space-y-8">
+            {/* Industries Grid */}
+            <div className="rounded-xl border border-indigo-950/15 bg-gradient-to-r from-indigo-50/60 to-blue-50/60 p-8 shadow-sm">
+              <h3 className="mb-6 text-center text-lg font-semibold text-indigo-950">
+                Industries We Serve
+              </h3>
+              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                {['Retail & E-commerce', 'Manufacturing', 'Logistics & Supply Chain', 'Education', 'Hospitality & Travel', 'Insurance', 'Real Estate', 'Government', 'Telecommunications', 'Energy & Utilities', 'Media & Publishing', 'Non-Profits'].map((industry) => (
+                  <div key={industry} className="rounded-lg bg-white/50 px-3 py-2 text-center text-sm font-medium text-indigo-950/70">
+                    {industry}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Company Sizes */}
+            <div className="rounded-xl border border-indigo-950/15 bg-gradient-to-r from-blue-50/60 to-indigo-50/60 p-8 shadow-sm">
+              <h3 className="mb-6 text-center text-lg font-semibold text-indigo-950">
+                All Business Sizes
+              </h3>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-3 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-950/60">Startups</p>
+                  <p className="mt-1 text-sm font-medium text-indigo-950">10-50 employees</p>
+                </div>
+                <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-3 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-950/60">SMEs</p>
+                  <p className="mt-1 text-sm font-medium text-indigo-950">50-500 employees</p>
+                </div>
+                <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-3 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-950/60">Mid-Market</p>
+                  <p className="mt-1 text-sm font-medium text-indigo-950">500-2,500 employees</p>
+                </div>
+                <div className="rounded-lg border border-indigo-950/10 bg-white px-4 py-3 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-indigo-950/60">Enterprise</p>
+                  <p className="mt-1 text-sm font-medium text-indigo-950">2,500+ employees</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Use Cases Examples */}
+            <div className="rounded-xl border border-coral/20 bg-gradient-to-r from-coral/5 to-orange-50/30 p-8 shadow-sm">
+              <h3 className="mb-6 text-center text-lg font-semibold text-indigo-950">
+                What We Modernize
+              </h3>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  'Legacy POS & Retail Systems',
+                  'Mainframe Banking Applications',
+                  'COBOL-based Insurance Platforms',
+                  'Manufacturing ERP Systems',
+                  'Logistics & Inventory Platforms',
+                  'Government Tax & Compliance Systems',
+                  'Supply Chain Management',
+                  'Telecommunications Billing Systems',
+                  'Education Management Systems',
+                ].map((useCase) => (
+                  <div key={useCase} className="flex items-center gap-2 rounded-lg bg-white/40 px-3 py-2 text-sm font-medium text-indigo-950/70">
+                    <svg className="h-4 w-4 flex-shrink-0 text-coral" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {useCase}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
