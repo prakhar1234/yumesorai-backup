@@ -87,6 +87,47 @@ export default function Home() {
                 See How It Works
               </Link>
             </div>
+
+            {/* Sectors We Serve */}
+            <div className="mt-16 pt-12 border-t border-indigo-950/10">
+              <p className="text-center text-sm font-semibold text-indigo-950/60 mb-8">
+                SERVING MAJOR SECTORS
+              </p>
+              <div className="grid grid-cols-3 gap-8 sm:gap-12 max-w-2xl mx-auto">
+                {[
+                  {
+                    icon: "🏥",
+                    name: "Healthcare",
+                    description: "EHR & Patient Systems",
+                  },
+                  {
+                    icon: "✈️",
+                    name: "Airlines",
+                    description: "Reservation & Operations",
+                  },
+                  {
+                    icon: "🏦",
+                    name: "BFSI",
+                    description: "Banking & Financial",
+                  },
+                ].map((sector) => (
+                  <div
+                    key={sector.name}
+                    className="text-center group hover:scale-110 transition-transform"
+                  >
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-coral/20 to-coral/10 group-hover:from-coral/30 group-hover:to-coral/20 transition-all mb-3">
+                      <span className="text-3xl">{sector.icon}</span>
+                    </div>
+                    <h4 className="text-base font-bold text-indigo-950">
+                      {sector.name}
+                    </h4>
+                    <p className="text-xs text-indigo-950/60 mt-1">
+                      {sector.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
