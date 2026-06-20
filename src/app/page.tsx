@@ -1,42 +1,6 @@
 import Link from "next/link";
 import { Card3DEffect } from "@/components/3DCardEffect";
 
-const industryCards = [
-  {
-    title: "Healthcare",
-    href: "/solutions/healthcare",
-    description:
-      "Modernize EHR systems, claims processing, and patient data platforms while maintaining HIPAA compliance.",
-    icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Airlines",
-    href: "/solutions/airlines",
-    description:
-      "Transform reservation systems, flight operations, and loyalty platforms from mainframe to cloud-native.",
-    icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-      </svg>
-    ),
-  },
-  {
-    title: "BFSI",
-    href: "/solutions/banking",
-    description:
-      "Modernize core banking, payment processing, insurance platforms, and risk management systems without disrupting operations.",
-    icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-      </svg>
-    ),
-  },
-];
-
 const proofMetrics = [
   { value: "1M+", label: "Lines of COBOL code migrated by our team" },
   { value: "50%", label: "Cheaper than competitors" },
