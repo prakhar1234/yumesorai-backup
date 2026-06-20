@@ -1,143 +1,79 @@
 import { NextRequest, NextResponse } from "next/server";
-import { assessmentFormSchema } from "@/lib/form-validation";
-import {
-  checkRateLimit,
-  getClientIp,
-  createErrorResponse,
-  createSuccessResponse,
-  logError,
-} from "@/lib/api-utils";
-import {
-  createOrUpdateContact,
-  addNote,
-} from "@/lib/hubspot";
-import {
-  sendEmail,
-  createAssessmentConfirmationEmail,
-} from "@/lib/email";
+import prisma from "@/lib/db";
+
+interface AssessmentFormData {
+  name: string;
+  email: string;
+  company: string;
+  industry: string;
+  systemType: string;
+  cobolLines?: number;
+  challenges?: string;
+}
 
 export async function POST(request: NextRequest) {
   try {
-    // Get client IP for rate limiting
-    const clientIp = getClientIp(request);
-
-    // Check rate limit
-    const isAllowed = await checkRateLimit(clientIp);
-    if (!isAllowed) {
-      return NextResponse.json(
-        createErrorResponse(
-          "Too many requests. Please try again later."
-        ),
-        { status: 429 }
-      );
-    }
-
     // Parse request body
-    let body;
+    let body: AssessmentFormData;
     try {
       body = await request.json();
     } catch {
       return NextResponse.json(
-        createErrorResponse("Invalid request body"),
+        { error: "Invalid request body" },
         { status: 400 }
       );
     }
 
-    // Validate request data
-    const validationResult = assessmentFormSchema.safeParse(body);
-    if (!validationResult.success) {
-      const errors = validationResult.error.issues.map((err) => ({
-        field: err.path.join("."),
-        message: err.message,
-      }));
-
+    // Validate required fields
+    if (!body.name || !body.email || !body.company || !body.industry || !body.systemType) {
       return NextResponse.json(
-        createErrorResponse("Validation failed", { errors }),
+        { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    const data = validationResult.data;
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(body.email)) {
+      return NextResponse.json(
+        { error: "Invalid email format" },
+        { status: 400 }
+      );
+    }
 
-    // Create or update contact in HubSpot
-    const contact = await createOrUpdateContact({
-      firstName: data.name.split(" ")[0],
-      lastName: data.name.split(" ").slice(1).join(" ") || "",
-      email: data.email,
-      company: data.company,
-      phone: data.phone,
-      jobTitle: data.jobTitle,
+    // Save to database
+    const assessment = await prisma.freeAssessment.create({
+      data: {
+        name: body.name.trim(),
+        email: body.email.trim(),
+        company: body.company.trim(),
+        industry: body.industry,
+        systemType: body.systemType,
+        cobolLines: body.cobolLines || null,
+        challenges: body.challenges?.trim(),
+      },
     });
 
-    // Add detailed note to contact with assessment data
-    const assessmentNote = `
-Assessment Form Submission
+    // TODO: Send confirmation email to user
+    // TODO: Send notification to assessment team
+    // TODO: Trigger automated assessment report generation
 
-Name: ${data.name}
-Email: ${data.email}
-Company: ${data.company}
-Industry: ${data.industry}
-Job Title: ${data.jobTitle || "N/A"}
-Phone: ${data.phone || "N/A"}
-
-Current Tech Stack: ${data.currentStack}
-Pain Points: ${data.painPoints.join(", ")}
-Timeline: ${data.timeline}
-
-Submission Type: Assessment`;
-
-    await addNote(contact.id, assessmentNote);
-
-    // Send confirmation email to user
-    await sendEmail({
-      to: data.email,
-      subject: "Assessment Received - Yumesorai",
-      html: createAssessmentConfirmationEmail(data.name.split(" ")[0]),
-    });
-
-    // Log success
-    console.log(`[Assessment API] Submission processed for ${data.email}`);
+    console.log(`[Assessment API] Submission received from ${body.email}`);
 
     return NextResponse.json(
-      createSuccessResponse(
-        "Your assessment has been submitted successfully",
-        {
-          contactId: contact.id,
-          email: data.email,
-        }
-      ),
+      {
+        success: true,
+        id: assessment.id,
+        message: "Your assessment has been submitted successfully",
+      },
       { status: 201 }
     );
   } catch (error) {
-    logError(error, "Assessment API");
+    console.error("[Assessment API] Error:", error);
 
     return NextResponse.json(
-      createErrorResponse(
-        "An error occurred while processing your assessment. Please try again later."
-      ),
+      { error: "An error occurred while processing your assessment. Please try again later." },
       { status: 500 }
     );
   }
-}
-
-// Optional: Support other HTTP methods with proper error responses
-export async function GET() {
-  return NextResponse.json(
-    createErrorResponse("Method not allowed"),
-    { status: 405 }
-  );
-}
-
-export async function PUT() {
-  return NextResponse.json(
-    createErrorResponse("Method not allowed"),
-    { status: 405 }
-  );
-}
-
-export async function DELETE() {
-  return NextResponse.json(
-    createErrorResponse("Method not allowed"),
-    { status: 405 }
-  );
 }

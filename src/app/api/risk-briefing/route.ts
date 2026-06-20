@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/db";
 
-interface DemoFormData {
+interface RiskBriefingFormData {
   name: string;
   email: string;
   company: string;
   industry: string;
-  jobTitle: string;
-  phone: string;
+  phone?: string;
   preferredDate: string;
+  preferredTime: string;
   timezone: string;
   message?: string;
 }
@@ -16,7 +16,7 @@ interface DemoFormData {
 export async function POST(request: NextRequest) {
   try {
     // Parse request body
-    let body: DemoFormData;
+    let body: RiskBriefingFormData;
     try {
       body = await request.json();
     } catch {
@@ -32,9 +32,8 @@ export async function POST(request: NextRequest) {
       !body.email ||
       !body.company ||
       !body.industry ||
-      !body.jobTitle ||
-      !body.phone ||
       !body.preferredDate ||
+      !body.preferredTime ||
       !body.timezone
     ) {
       return NextResponse.json(
@@ -52,9 +51,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Combine date and time into ISO datetime
+    const [hour, minute] = body.preferredTime.split(":").map(Number);
+    const datetime = new Date(body.preferredDate);
+    datetime.setHours(hour, minute, 0, 0);
+
     // Validate that the requested time is in the future
-    const requestedDate = new Date(body.preferredDate);
-    if (requestedDate < new Date()) {
+    if (datetime < new Date()) {
       return NextResponse.json(
         { error: "Requested date must be in the future" },
         { status: 400 }
@@ -62,25 +65,24 @@ export async function POST(request: NextRequest) {
     }
 
     // Save to database
-    const demoRequest = await prisma.demoRequest.create({
+    const briefing = await prisma.riskBriefing.create({
       data: {
         name: body.name.trim(),
         email: body.email.trim(),
         company: body.company.trim(),
         industry: body.industry,
-        jobTitle: body.jobTitle,
-        phone: body.phone.trim(),
-        preferredDate: requestedDate,
+        phone: body.phone?.trim(),
+        preferredDate: datetime,
         timezone: body.timezone,
         message: body.message?.trim(),
       },
     });
 
     // TODO: Send confirmation email to user
-    // TODO: Send notification to admin/sales team
+    // TODO: Send notification to briefing team
     // TODO: Integrate with calendar scheduling system
 
-    const formattedDate = requestedDate.toLocaleString("en-US", {
+    const formattedDate = datetime.toLocaleString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -89,23 +91,23 @@ export async function POST(request: NextRequest) {
     });
 
     console.log(
-      `[Demo API] Booking received from ${body.email} for ${formattedDate}`
+      `[Risk Briefing API] Briefing scheduled from ${body.email} for ${formattedDate}`
     );
 
     return NextResponse.json(
       {
         success: true,
-        id: demoRequest.id,
-        message: "Your demo has been booked successfully. Check your email for confirmation details.",
-        demoDate: formattedDate,
+        id: briefing.id,
+        message: "Your risk briefing has been scheduled successfully. Check your email for confirmation details.",
+        briefingDate: formattedDate,
       },
       { status: 201 }
     );
   } catch (error) {
-    console.error("[Demo API] Error:", error);
+    console.error("[Risk Briefing API] Error:", error);
 
     return NextResponse.json(
-      { error: "An error occurred while booking your demo. Please try again later." },
+      { error: "An error occurred while scheduling your briefing. Please try again later." },
       { status: 500 }
     );
   }
